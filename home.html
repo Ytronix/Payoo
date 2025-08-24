@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--! Favicon !-->
+    <link rel="icon" type="image/png" href="images/payoo.png" />
+    <!--! Title !-->
+    <title>Home | Payoo</title>
+    <!--! Daisy UI & Tailwind CDN !-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--! Raw CSS !-->
+    <link rel="stylesheet" href="style.css" />
+    <!--! Font !-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--! Font Awesome !-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-gray-100 outfit h-[100vh]">
+    <header class="py-3 px-4 bg-white border-b-4 border-b-gray-100">
+      <nav class="navbar mx-auto">
+        <section class="topbar flex items-center justify-between w-full">
+          <div class="left-side flex items-center justify-between">
+            <img src="images/Group.png" alt="" />
+            <div>
+              <h2 class="text-zinc-950 text-xl font-extrabold">$<span id="available-amount">100</span></h2>
+              <p class="font-normal text-zinc-500">Available Balance</p>
+            </div>
+          </div>
+          <button
+            id="logout-btn"
+            class="text-zinc-500 border-1 border-zinc-500 p-2 rounded-lg"
+          >
+            <img
+              src="images/arrow-out-left-square-half.png"
+              alt=""
+              class="inline mr-2"
+            />Log Out
+          </button>
+        </section>
+      </nav>
+    </header>
+    <main
+      class="homePage p-5 bg-white border-b-1 border-b-gray-100 rounded-b-2xl"
+    >
+      <section class="home mx-auto py-3">
+        <h1 class="text-2xl font-semibold mb-3">🔥 Welcome to Payooo!</h1>
+        <p class="text-zinc-500 ml-2 mb-6">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+        <div
+          class="card-container grid grid-cols-3 gap-x-7 gap-y-3 place-items-center"
+        >
+          <div
+            class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+            data-target = "add-money"
+          >
+            <img src="images/wallet1.png" alt="" class="w-6 h-6" />
+            <p class="text-sm">Add Money</p>
+          </div>
+          <div
+            class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+            data-target = "cashOut"
+          >
+            <img src="images/send1.png" alt="" class="w-6 h-6" />
+            <p class="text-sm">Cashout</p>
+          </div>
+          <div
+            class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+          >
+            <img src="images/send1.png" alt="" class="w-6 h-6" />
+            <p class="text-sm">Transfer Money</p>
+          </div>
+          <div
+            class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+          >
+            <img src="images/bonus1.png" alt="" class="w-6 h-6" />
+            <p class="text-sm">Get Bonus</p>
+          </div>
+          <div
+            class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+          >
+            <img src="images/purse1.png" alt="" class="w-6 h-6" />
+            <p class="text-sm">Pay Bill</p>
+          </div>
+          <div
+            class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+          >
+            <img src="images/transaction1.png" alt="" class="w-6 h-6" />
+            <p class="text-sm">Transactions</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--? Add Money Form ?-->
+    <section id="add-money" class="hidden-section p-4 mb-5 hidden">
+      <h1 class="text-xl font-semibold mb-2.5">Add Money</h1>
+      <form action="" class="add-money-form bg-white p-6 rounded-3xl">
+        <div class="mb-2.5"> 
+          <h1 class="mb-2.5">Select A Bank</h1>
+          <select class="select w-full px-4 py-2.5  rounded-4xl border-none bg-gray-100">
+            <option disabled selected>Select Bank</option>
+            <option>Sonali Bank</option>
+            <option>Islami Bank</option>
+            <option>Brac Bank</option>
+            <option>Exim Bank</option>
+          </select> 
+        </div>
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">Bank Account Number</h1>
+          <input type="text"id="" placeholder="Enter 11 digit Account Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100" />
+        </div>
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">Deposit Amount</h1>
+          <input type="text" id="amount" placeholder="Enter Amount" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+        </div>
+        <div class="mb-5">
+          <h1 class="mb-2.5">Pin Number</h1>
+          <input type="text" id="add-money-pin" placeholder="Enter 4 digit Pin Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+        </div>
+        <button id="add-money-btn" class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white" type="button">
+          Add Money
+        </button>
+      </form>
+    </section>
+
+    <!--? CashOut Form ?-->
+    <section id="cashOut" class="hidden-section p-4 mb-5 hidden">
+      <h1 class="text-xl font-semibold mb-2.5">Cash Out</h1>
+      <form action="" class="cash-out-form bg-white p-6 rounded-3xl">
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">Agent Number</h1>
+          <input type="text"id="" placeholder="Enter 11 digit Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100" />
+        </div>
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">Withdrawal Amount</h1>
+          <input type="text" id="amount" placeholder="Enter Amount" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+        </div>
+        <div class="mb-5">
+          <h1 class="mb-2.5">Pin Number</h1>
+          <input type="text" id="cash-out-pin" placeholder="Enter 4 digit Pin Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+        </div>
+        <button id="cash-out-btn" class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white" type="button">
+          Withdraw Money
+        </button>
+      </form>
+    </section>
+    <script src="home.js"></script>
+  </body>
+</html>

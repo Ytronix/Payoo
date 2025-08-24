@@ -1,4 +1,4 @@
-//* login-btn  ,   mobile-number ,    pin-number
+//* login Page JS
 const verifyMobile = 12345678910;
 const verifyPin = 1234;
 
@@ -10,7 +10,7 @@ document.getElementById("login-btn").addEventListener("click",
             alert("Please Input a Valid Number");
         }
         else if (verifyMobile === Number(mobileNumber) && verifyPin === Number(pinNumber)) {
-            console.log("Login Succesfully.");
+            window.location.href = "home.html";
         }
         else {
             alert("Invalid Credentials");
