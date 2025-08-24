@@ -71,3 +71,35 @@ document.getElementById("cash-out-btn").addEventListener("click", function () {
     }
   }
 });
+
+//? Transfer Money
+const form3 = document.querySelector(".transfer-money-form");
+document.getElementById("send-btn").addEventListener("click", function () {
+  const inputs = document.querySelectorAll("#transfer input");
+  const amountToSend = document.querySelector("#transfer #amount").value;
+  if (inputs[0].value.length !== 11) {
+    alert("Please enter 11 digit valid Number");
+  } else if (amountToSend === "") {
+    alert("Please Enter an Amount");
+  } else {
+    const pinNumber = document.getElementById("transfer-pin").value;
+    if (Number(pinNumber) === verifyPin) {
+      availableAmount -= Number(amountToSend);
+      document.getElementById("available-amount").innerText = availableAmount;
+    } else {
+      alert("Incorrect Pin");
+    }
+  }
+});
+
+//? Get Bonus
+document.getElementById("get-bonus-btn").addEventListener("click", function () {
+  const input = document.querySelector("#get-bonus input");
+  if (input.value === "KaderVaiJindabad") {
+    availableAmount += availableAmount * 0.15;
+    document.getElementById("available-amount").innerText =
+      availableAmount.toFixed(2);
+  } else {
+    alert("Incorrect Coupon Code!");
+  }
+});

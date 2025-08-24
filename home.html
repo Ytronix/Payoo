@@ -85,12 +85,14 @@
           </div>
           <div
             class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+            data-target="transfer"
           >
             <img src="images/send1.png" alt="" class="w-6 h-6" />
             <p class="text-sm">Transfer Money</p>
           </div>
           <div
             class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+            data-target="get-bonus"
           >
             <img src="images/bonus1.png" alt="" class="w-6 h-6" />
             <p class="text-sm">Get Bonus</p>
@@ -164,6 +166,43 @@
         </button>
       </form>
     </section>
+
+    <!--? Transfer Money Form ?-->
+    <section id="transfer" class="hidden-section p-4 mb-5 hidden">
+      <h1 class="text-xl font-semibold mb-2.5">Send Money</h1>
+      <form action="" class="transfer-money-form bg-white p-6 rounded-3xl">
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">User Number</h1>
+          <input type="text"id="" placeholder="Enter 11 digit Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100" />
+        </div>
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">Transfer Amount</h1>
+          <input type="text" id="amount" placeholder="Enter Amount" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+        </div>
+        <div class="mb-5">
+          <h1 class="mb-2.5">Pin Number</h1>
+          <input type="text" id="transfer-pin" placeholder="Enter 4 digit Pin Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+        </div>
+        <button id="send-btn" class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white" type="button">
+          Send Money
+        </button>
+      </form>
+    </section>
+
+    <!--? Get Bonus Form -->
+    <section id="get-bonus" class="hidden-section p-4 mb-5 hidden">
+      <h1 class="text-xl font-semibold mb-2.5">Get Bonus</h1>
+      <form action="" class="get-bonus-form bg-white p-6 rounded-3xl">
+        <div class="mb-5">
+          <h1 class="mb-2.5">Enter Coupon</h1>
+          <input type="text" id="" placeholder="Enter Your Coupon" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100" />
+        </div>
+        <button id="get-bonus-btn" class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white" type="button">
+          Get Bonus
+        </button>
+      </form>
+    </section>
+
     <script src="home.js"></script>
   </body>
 </html>
