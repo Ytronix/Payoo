@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 .outfit {
-    font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .card img,
 .card p {
-    pointer-events: none;
+  pointer-events: none;
 }
 
-.card-toggle{
-    border: 2px solid #0874f2;
-    background-color: #0874f220;
+.card-toggle {
+  border: 2px solid #0874f2;
+  background-color: #0874f220;
 }
 
-
-
+.alert {
+    outline: 2px solid red;
+}

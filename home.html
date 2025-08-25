@@ -40,23 +40,22 @@
           <div class="left-side flex items-center justify-between">
             <img src="images/Group.png" alt="" />
             <div>
-              <h2 class="text-zinc-950 text-xl font-extrabold">$<span id="available-amount">100</span></h2>
-              <p class="font-normal text-zinc-500">Available Balance</p>
+              <h2 class="text-zinc-950 text-xl font-extrabold">
+                $<span id="available-amount">100</span>
+              </h2>
+              <p class="text-zinc-500">Available Balance</p>
             </div>
           </div>
           <button
             id="logout-btn"
             class="text-zinc-500 border-1 border-zinc-500 p-2 rounded-lg"
           >
-            <img
-              src="images/arrow-out-left-square-half.png"
-              alt=""
-              class="inline mr-2"
-            />Log Out
+            <img src="images/LogOut.png" alt="" class="inline mr-2" />Log Out
           </button>
         </section>
       </nav>
     </header>
+
     <main
       class="homePage p-5 bg-white border-b-1 border-b-gray-100 rounded-b-2xl"
     >
@@ -71,14 +70,14 @@
         >
           <div
             class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
-            data-target = "add-money"
+            data-target="add-money"
           >
             <img src="images/wallet1.png" alt="" class="w-6 h-6" />
             <p class="text-sm">Add Money</p>
           </div>
           <div
             class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
-            data-target = "cashOut"
+            data-target="cashOut"
           >
             <img src="images/send1.png" alt="" class="w-6 h-6" />
             <p class="text-sm">Cashout</p>
@@ -87,7 +86,7 @@
             class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
             data-target="transfer"
           >
-            <img src="images/send1.png" alt="" class="w-6 h-6" />
+            <img src="images/money1.png" alt="" class="w-6 h-6" />
             <p class="text-sm">Transfer Money</p>
           </div>
           <div
@@ -99,12 +98,14 @@
           </div>
           <div
             class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+            data-target="pay-bill"
           >
             <img src="images/purse1.png" alt="" class="w-6 h-6" />
             <p class="text-sm">Pay Bill</p>
           </div>
           <div
             class="card py-5 border-2 border-gray-100 flex flex-col items-center w-31"
+            data-target="transactions"
           >
             <img src="images/transaction1.png" alt="" class="w-6 h-6" />
             <p class="text-sm">Transactions</p>
@@ -117,29 +118,50 @@
     <section id="add-money" class="hidden-section p-4 mb-5 hidden">
       <h1 class="text-xl font-semibold mb-2.5">Add Money</h1>
       <form action="" class="add-money-form bg-white p-6 rounded-3xl">
-        <div class="mb-2.5"> 
+        <div class="mb-2.5">
           <h1 class="mb-2.5">Select A Bank</h1>
-          <select class="select w-full px-4 py-2.5  rounded-4xl border-none bg-gray-100">
+          <select
+            class="select w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          >
             <option disabled selected>Select Bank</option>
             <option>Sonali Bank</option>
             <option>Islami Bank</option>
             <option>Brac Bank</option>
             <option>Exim Bank</option>
-          </select> 
+          </select>
         </div>
         <div class="mb-2.5">
           <h1 class="mb-2.5">Bank Account Number</h1>
-          <input type="text"id="" placeholder="Enter 11 digit Account Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100" />
+          <input
+            type="text"
+            id=""
+            placeholder="Enter 11 digit Account Number"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
         <div class="mb-2.5">
           <h1 class="mb-2.5">Deposit Amount</h1>
-          <input type="text" id="amount" placeholder="Enter Amount" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+          <input
+            type="text"
+            id="amount"
+            placeholder="Enter Amount"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
         <div class="mb-5">
           <h1 class="mb-2.5">Pin Number</h1>
-          <input type="text" id="add-money-pin" placeholder="Enter 4 digit Pin Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+          <input
+            type="text"
+            id="add-money-pin"
+            placeholder="Enter 4 digit Pin Number"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
-        <button id="add-money-btn" class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white" type="button">
+        <button
+          id="add-money-btn"
+          class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white"
+          type="button"
+        >
           Add Money
         </button>
       </form>
@@ -151,17 +173,36 @@
       <form action="" class="cash-out-form bg-white p-6 rounded-3xl">
         <div class="mb-2.5">
           <h1 class="mb-2.5">Agent Number</h1>
-          <input type="text"id="" placeholder="Enter 11 digit Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100" />
+          <input
+            type="text"
+            id=""
+            placeholder="Enter 11 digit Number"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
         <div class="mb-2.5">
           <h1 class="mb-2.5">Withdrawal Amount</h1>
-          <input type="text" id="amount" placeholder="Enter Amount" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+          <input
+            type="text"
+            id="amount"
+            placeholder="Enter Amount"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
         <div class="mb-5">
           <h1 class="mb-2.5">Pin Number</h1>
-          <input type="text" id="cash-out-pin" placeholder="Enter 4 digit Pin Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+          <input
+            type="text"
+            id="cash-out-pin"
+            placeholder="Enter 4 digit Pin Number"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
-        <button id="cash-out-btn" class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white" type="button">
+        <button
+          id="cash-out-btn"
+          class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white"
+          type="button"
+        >
           Withdraw Money
         </button>
       </form>
@@ -173,17 +214,36 @@
       <form action="" class="transfer-money-form bg-white p-6 rounded-3xl">
         <div class="mb-2.5">
           <h1 class="mb-2.5">User Number</h1>
-          <input type="text"id="" placeholder="Enter 11 digit Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100" />
+          <input
+            type="text"
+            id=""
+            placeholder="Enter 11 digit Number"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
         <div class="mb-2.5">
           <h1 class="mb-2.5">Transfer Amount</h1>
-          <input type="text" id="amount" placeholder="Enter Amount" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+          <input
+            type="text"
+            id="amount"
+            placeholder="Enter Amount"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
         <div class="mb-5">
           <h1 class="mb-2.5">Pin Number</h1>
-          <input type="text" id="transfer-pin" placeholder="Enter 4 digit Pin Number" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"/>
+          <input
+            type="text"
+            id="transfer-pin"
+            placeholder="Enter 4 digit Pin Number"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
-        <button id="send-btn" class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white" type="button">
+        <button
+          id="send-btn"
+          class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white"
+          type="button"
+        >
           Send Money
         </button>
       </form>
@@ -195,12 +255,95 @@
       <form action="" class="get-bonus-form bg-white p-6 rounded-3xl">
         <div class="mb-5">
           <h1 class="mb-2.5">Enter Coupon</h1>
-          <input type="text" id="" placeholder="Enter Your Coupon" class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100" />
+          <input
+            type="text"
+            id=""
+            placeholder="Enter Your Coupon"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
         </div>
-        <button id="get-bonus-btn" class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white" type="button">
+        <button
+          id="get-bonus-btn"
+          class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white"
+          type="button"
+        >
           Get Bonus
         </button>
       </form>
+    </section>
+
+    <!--? Pay Bill Form ?-->
+    <section id="pay-bill" class="hidden-section p-4 mb-5 hidden">
+      <h1 class="text-xl font-semibold mb-2.5">Pay Bills</h1>
+      <form action="" class="pay-bill-form bg-white p-6 rounded-3xl">
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">Pay Bills</h1>
+          <select
+            class="select w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          >
+            <option disabled selected>Select to Pay</option>
+            <option>Electricity Bill</option>
+            <option>Gas Bill</option>
+            <option>Wifi Bill</option>
+            <option>Water Bill</option>
+            <option>Restaurant Bill</option>
+          </select>
+        </div>
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">Biller Account Number</h1>
+          <input
+            type="text"
+            id=""
+            placeholder="Enter Account Number"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
+        </div>
+        <div class="mb-2.5">
+          <h1 class="mb-2.5">Amount to Pay</h1>
+          <input
+            type="text"
+            id="amount"
+            placeholder="Enter Amount"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
+        </div>
+        <div class="mb-5">
+          <h1 class="mb-2.5">Pin Number</h1>
+          <input
+            type="text"
+            id="pay-bill-pin"
+            placeholder="Enter 4 digit Pin Number"
+            class="w-full px-4 py-2.5 rounded-4xl border-none bg-gray-100"
+          />
+        </div>
+        <button
+          id="pay-bill-btn"
+          class="bg-blue-600 w-full rounded-4xl px-4 py-2.5 font-medium text-xl text-white"
+          type="button"
+        >
+          Pay Now
+        </button>
+      </form>
+    </section>
+
+    <!--? Transaction History ?-->
+    <section id="transactions" class="hidden-section p-4 mb-5 hidden">
+      <div class="flex items-center justify-between mb-3">
+        <h1 class="text-xl font-semibold">Transaction History</h1>
+        <p class="text-zinc-500">View All</p>
+      </div>
+      <div id="history-card-container" class="w-full flex flex-col-reverse">
+      </div>
+    </section>
+
+    <!--? Recent Transection ?-->
+    <section id="recents" class="hidden-section p-4 mb-5">
+      <div class="flex items-center justify-between mb-3">
+        <h1 class="text-xl font-semibold">Recent Transactions</h1>
+        <button class="text-zinc-500">View All</button>
+      </div>
+      <div id="recent-transactions" class="w-full flex flex-col-reverse">
+      </div>
     </section>
 
     <script src="home.js"></script>
